@@ -13,6 +13,9 @@ testdata/initFabricCaFvt.json
 testdata/openssl.cnf.base.this
 testdata/runFabricCaFvt.json
 testdata/ec_cert.pem
+testdata/IssuerPublicKey
+testdata/IssuerRevocationPublicKey
+fabric-ca-server-config.yaml
 /release/darwin-amd64
 /release/linux-amd64
 /release/linux-s390x

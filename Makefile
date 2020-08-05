@@ -144,6 +144,7 @@ build/image/%/$(DUMMY): Makefile build/image/%/payload
 		| sed -e 's|_TAG_|$(DOCKER_TAG)|g' \
 		| sed -e 's|_PGVER_|$(PGVER)|g' \
 		> $(@D)/Dockerfile
+	@cp sources.list $(@D)/sources.list
 	$(DBUILD) -t $(DOCKER_NAME) --build-arg FABRIC_CA_DYNAMIC_LINK=$(FABRIC_CA_DYNAMIC_LINK) $(@D)
 	docker tag $(DOCKER_NAME) $(DOCKER_NAME):$(DOCKER_TAG)
 	@touch $@
